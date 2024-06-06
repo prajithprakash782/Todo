@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="main">
+
+        <h1>todos</h1>
+        <div class="relative">
+            <button onclick=markAll() id="drop"></button>
+            <input class="inp" type="text" placeholder="What needs to be done?">
+        </div>
+
+
+
+
+
+        <div class="list-container">
+            <ul class="list">
+
+            </ul>
+
+            <div class="footer">
+                <div>
+                    <p class="items"></p>
+                </div>
+
+                <div class="btn">
+                    <button data-tab="all" class="tab" onclick=allTasks()>All</button>
+                    <button data-tab="active" class="tab" onclick=activeTasks()>Active</button>
+                    <button data-tab="completed" class="tab" onclick=completedView()>Completed</button>
+                    <button onclick=clearCompleted()>Clear Completed</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
